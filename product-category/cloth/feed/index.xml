@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>cloth &#8211; Ihaa</title>
+	<atom:link href="/product-category/cloth/feed/" rel="self" type="application/rss+xml" />
+	<link></link>
+	<description>Lifestyle</description>
+	<lastBuildDate>Tue, 24 Sep 2024 09:58:49 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7.1</generator>
+
+<image>
+	<url>/wp-content/uploads/2023/10/ihaa-web-logo-white-100x100.png</url>
+	<title>cloth &#8211; Ihaa</title>
+	<link></link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Handcrafted Fabric Earrings</title>
+		<link>/product/handcrafted-fabric-earrings-3/</link>
+					<comments>/product/handcrafted-fabric-earrings-3/#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Tue, 24 Sep 2024 09:52:08 +0000</pubDate>
+				<guid isPermaLink="false">/?post_type=product#038;p=4407</guid>
+
+					<description><![CDATA[Elevate your style with these unique, handcrafted fabric earrings. Made from high-quality metal, leftover fabric .Comfortable for all-day wear, these earrings are hypoallergenic and gentle on skin.]]></description>
+										<content:encoded><![CDATA[<p>Elevate your style with these unique, handcrafted fabric earrings. Made from high-quality metal, leftover fabric .Comfortable for all-day wear, these earrings are hypoallergenic and gentle on skin.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/product/handcrafted-fabric-earrings-3/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">4407</post-id>	</item>
+		<item>
+		<title>Handcrafted Fabric Earrings</title>
+		<link>/product/handcrafted-fabric-earrings-2/</link>
+					<comments>/product/handcrafted-fabric-earrings-2/#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Tue, 24 Sep 2024 08:48:13 +0000</pubDate>
+				<guid isPermaLink="false">/?post_type=product#038;p=4376</guid>
+
+					<description><![CDATA[Handcrafted Fabric Earrings Elevate your style with these unique, handcrafted fabric earrings. Made from high-quality metal, leftover fabric .Comfortable for all-day wear, these earrings are hypoallergenic and gentle on skin.]]></description>
+										<content:encoded><![CDATA[<p>Handcrafted Fabric Earrings<br />
+Elevate your style with these unique, handcrafted fabric earrings. Made from high-quality metal, leftover fabric .Comfortable for all-day wear, these earrings are hypoallergenic and gentle on skin.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/product/handcrafted-fabric-earrings-2/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">4376</post-id>	</item>
+		<item>
+		<title>Handcrafted Fabric Earrings</title>
+		<link>/product/handcrafted-fabric-earrings/</link>
+					<comments>/product/handcrafted-fabric-earrings/#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Tue, 24 Sep 2024 08:23:40 +0000</pubDate>
+				<guid isPermaLink="false">/?post_type=product#038;p=4369</guid>
+
+					<description><![CDATA[Handcrafted Fabric Earrings Elevate your style with these unique, handcrafted fabric earrings. Made from high-quality metal, leftover fabric .Comfortable for all-day wear, these earrings are hypoallergenic and gentle on skin.]]></description>
+										<content:encoded><![CDATA[<p>Handcrafted Fabric Earrings<br />
+Elevate your style with these unique, handcrafted fabric earrings. Made from high-quality metal, leftover fabric .Comfortable for all-day wear, these earrings are hypoallergenic and gentle on skin.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/product/handcrafted-fabric-earrings/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">4369</post-id>	</item>
+	</channel>
+</rss>
