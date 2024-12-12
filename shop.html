@@ -200,6 +200,52 @@ var wc_country_select_params = {"countries":"{\"AF\":[],\"AL\":{\"AL-01\":\"Bera
 </div>		</div>
 				</div>
 				</div>
+				<script>
+					document.addEventListener("DOMContentLoaded", function () {
+						const mobileTriggerOpen = document.querySelector(".lakit-nav__mobile-trigger-open");
+						const mobileTriggerClose = document.querySelector(".lakit-nav__mobile-trigger-close");
+						const mobileMenu = document.querySelector(".lakit-nav-menuwrap");
+						const breakpoint = 1279; // Mobile breakpoint from data-mobile-breakpoint
+					
+						// Function to toggle the menu visibility
+						function toggleMenu(isOpen) {
+							if (isOpen) {
+								mobileMenu.style.display = "block"; // Ensure menu is visible
+								mobileMenu.setAttribute("aria-hidden", "false"); // Accessibility update
+							} else {
+								mobileMenu.style.display = "none"; // Hide menu
+								mobileMenu.setAttribute("aria-hidden", "true");
+							}
+						}
+					
+						// Event listener to open the menu
+						mobileTriggerOpen.addEventListener("click", function () {
+							toggleMenu(true);
+						});
+					
+						// Event listener to close the menu
+						mobileTriggerClose.addEventListener("click", function () {
+							toggleMenu(false);
+						});
+					
+						// Ensure menu behaves correctly on resize
+						window.addEventListener("resize", function () {
+							if (window.innerWidth > breakpoint) {
+								mobileMenu.style.display = ""; // Reset to default CSS for desktop
+								mobileMenu.removeAttribute("aria-hidden");
+							} else {
+								toggleMenu(false); // Ensure mobile menu starts hidden
+							}
+						});
+					
+						// Initialize correct state
+						if (window.innerWidth <= breakpoint) {
+							toggleMenu(false); // Hide for mobile
+						} else {
+							mobileMenu.style.display = ""; // Default for desktop
+						}
+					});
+				</script>
 					</div>
 				</div>
 				</div>
@@ -687,60 +733,7 @@ var wc_country_select_params = {"countries":"{\"AF\":[],\"AL\":{\"AL-01\":\"Bera
 				</div>
 					</div>
 				</div>
-		<div class="elementor-element elementor-element-036ea2e e-con-full animated-fast elementor-hidden-desktop elementor-hidden-laptop elementor-hidden-tablet e-flex lakit-col-width-auto-no elementor-invisible e-container e-root-container elementor-top-section e-con e-parent" data-id="036ea2e" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;sticky&quot;:&quot;bottom&quot;,&quot;sticky_on&quot;:[&quot;mobile&quot;,&quot;mobile_extra&quot;],&quot;sticky_effects_offset&quot;:50,&quot;animation&quot;:&quot;slideInUp&quot;,&quot;sticky_offset&quot;:0}">
-				<div class="lakit-ajax-searchform elementor-element elementor-element-7969ab6 elementor-widget lastudio-kit elementor-lakit-search" data-id="7969ab6" data-element_type="widget" data-widget_type="lakit-search.default">
-				<div class="elementor-widget-container">
-			<div class="lakit-search">
-<div class="lakit-search__popup lakit-search__popup--full-screen lakit-search__popup--move-up-effect">
-	<div class="lakit-search__popup-content">
-<form role="search" method="get" class="lakit-search__form" action="/">
-    	<label class="lakit-search__label">
-		<input type="search" class="lakit-search__field" placeholder="Search &hellip;" value="" name="s">
-	</label>
-		<button type="submit" class="lakit-search__submit main-color"><span class="lakit-search__submit-icon lakit-blocks-icon"><svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewbox="0 0 300 300" class="lakit-font-icon-svg"><use xlink:href="#LaStudioIcons___zoom_2"></use></svg></span></button>
-		</form>
-<button type="button" class="button lakit-search__popup-close"><span class="lakit-search__popup-close-icon lakit-blocks-icon"><svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewbox="0 0 300 300" class="lakit-font-icon-svg"><use xlink:href="#LaStudioIcons___e_remove"></use></svg></span></button>
-</div>
-</div>
-<div class="lakit-search__popup-trigger-container">
-	<button type="button" class="lakit-search__popup-trigger main-color" data-title="" aria-label="Search &hellip;"><span class="lakit-search__popup-trigger-icon lakit-blocks-icon"><svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewbox="0 0 300 300" class="lakit-font-icon-svg"><use xlink:href="#LaStudioIcons___zoom_1"></use></svg></span></button>
-</div>
-</div>		</div>
-				</div>
-				<div class="elementor-element elementor-element-ac0739a elementor-view-default elementor-widget elementor-widget-icon" data-id="ac0739a" data-element_type="widget" data-widget_type="icon.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-icon-wrapper">
-			<a class="elementor-icon" href="http://localhost/my-account/">
-			<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewbox="0 0 300 300" class="lakit-font-icon-svg"><use xlink:href="#LaStudioIcons___single_01_1"></use></svg>			</a>
-		</div>
-				</div>
-				</div>
-				<div class="elementor-element elementor-element-822c5aa elementor-view-default elementor-widget elementor-widget-icon" data-id="822c5aa" data-element_type="widget" data-widget_type="icon.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-icon-wrapper">
-			<a class="elementor-icon" href="http://localhost/wishlist/" data-action="lakit_wishlist">
-			<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewbox="0 0 300 300" class="lakit-font-icon-svg"><use xlink:href="#LaStudioIcons___heart_1"></use></svg>			</a>
-		</div>
-				</div>
-				</div>
-				<div class="elementor-element elementor-element-88e4dd4 elementor-view-default elementor-widget elementor-widget-icon" data-id="88e4dd4" data-element_type="widget" data-widget_type="icon.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-icon-wrapper">
-			<a class="elementor-icon" href="http://localhost/compare/" data-action="lakit_compare">
-			<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewbox="0 0 300 300" class="lakit-font-icon-svg"><use xlink:href="#LaStudioIcons___ic_compare_arrows_24px"></use></svg>			</a>
-		</div>
-				</div>
-				</div>
-				<div class="elementor-element elementor-element-e4557bd elementor-widget lastudio-kit elementor-lakit-menucart" data-id="e4557bd" data-element_type="widget" data-widget_type="lakit-menucart.default">
-				<div class="elementor-widget-container">
-			<div class="lakit-cart lakit-cart--slide-out-layout" data-settings="{&quot;triggerType&quot;:&quot;none&quot;}">
-	<div class="lakit-cart__heading"><a href="/cart-2/" class="lakit-cart__heading-link main-color"><span class="lakit-cart__icon lakit-blocks-icon"><svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewbox="0 0 300 300" class="lakit-font-icon-svg"><use xlink:href="#LaStudioIcons___shopping_cart_1"></use></svg></span>		<span class="lakit-cart__count"><span class="lakit-cart__count-val">0</span></span>
-		</a></div>
-
-	    <div class="lakit-cart__overlay"></div>
-</div>		</div>
-				</div>
-				</div>
+		
 				</div>
 		
 
