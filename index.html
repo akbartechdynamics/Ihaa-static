@@ -354,7 +354,7 @@ var wc_country_select_params = {"countries":"{\"AF\":[],\"AL\":{\"AL-01\":\"Bera
 							});
 					
 							nextArrow.addEventListener("click", function () {
-								currentIndex = (currentIndex + 1) % totalSlides;
+								currentIndex = (currentIndex + 1 + totalSlides) % totalSlides;
 								updateSlidePosition();
 							});
 						});
