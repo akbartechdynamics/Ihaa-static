@@ -338,26 +338,45 @@ var wc_country_select_params = {"countries":"{\"AF\":[],\"AL\":{\"AL-01\":\"Bera
 							const prevArrow = document.querySelector(".lakit-carousel__prev-arrow-db691cb");
 							const nextArrow = document.querySelector(".lakit-carousel__next-arrow-db691cb");
 							const swiperWrapper = document.querySelector("#lakit_carousel_db691cb .swiper-wrapper");
-					
-							let currentIndex = 0;
+						
+							let currentIndex = 0; // Tracks the first slide of the visible group
 							const slides = swiperWrapper.children;
 							const totalSlides = slides.length;
-					
+						
+							// Get the number of visible slides based on the current column setting
+							function getVisibleSlides() {
+								const computedStyle = window.getComputedStyle(swiperWrapper);
+								return parseInt(computedStyle.getPropertyValue("--e-c-col")) || 1;
+							}
+						
 							function updateSlidePosition() {
-								swiperWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+								const visibleSlides = getVisibleSlides();
+								swiperWrapper.style.transform = `translateX(-${(currentIndex / visibleSlides) * 100}%)`;
 								swiperWrapper.style.transition = "transform 0.5s ease-in-out";
 							}
-					
+						
 							prevArrow.addEventListener("click", function () {
-								currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+								const visibleSlides = getVisibleSlides();
+								currentIndex = (currentIndex - visibleSlides + totalSlides) % totalSlides;
 								updateSlidePosition();
 							});
-					
+						
 							nextArrow.addEventListener("click", function () {
-								currentIndex = (currentIndex + 1 + totalSlides) % totalSlides;
+								const visibleSlides = getVisibleSlides();
+								currentIndex = (currentIndex + visibleSlides) % totalSlides;
 								updateSlidePosition();
 							});
+						
+							// Adjust the carousel on window resize
+							window.addEventListener("resize", function () {
+								currentIndex = 0; // Reset to the first slide
+								updateSlidePosition();
+							});
+						
+							// Initial setup
+							updateSlidePosition();
 						});
+						
 					</script>
 		<div class="elementor-element elementor-element-5d8b420 e-flex e-con-boxed lakit-col-width-auto-no e-container e-root-container elementor-top-section e-con e-parent" data-id="5d8b420" data-element_type="container">
 					<div class="e-con-inner">
