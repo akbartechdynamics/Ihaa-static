@@ -175,6 +175,36 @@ var wc_country_select_params = {"countries":"{\"AF\":[],\"AL\":{\"AL-01\":\"Bera
 		<style type="text/css" id="wp-custom-css">.ship-to-different-address {
     display: none;
 }</style>
+<style>
+    /* Base styles */
+    .menu-item-has-children {
+        position: relative;
+    }
+
+    .lakit-nav__sub {
+        display: none; /* Hide by default */
+        position: absolute;
+        top: 100%; /* Position below the parent menu */
+        left: 0 !important; /* Align to the left of the parent */
+        right: auto !important;
+        background: #fff;
+        border: 1px solid #ddd;
+        z-index: 1000;
+        min-width: 100%; /* Ensure submenu width matches the parent */
+        white-space: nowrap; /* Prevent text wrapping */
+        visibility: hidden; /* Hide submenu initially */
+        opacity: 0; /* Make submenu transparent initially */
+        transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
+    }
+
+    /* Show submenu on hover */
+    .menu-item-has-children:hover .lakit-nav__sub {
+        display: block !important; /* Ensure visibility */
+        visibility: visible; /* Make submenu visible */
+        opacity: 1; /* Make submenu opaque */
+    }
+</style>
+
 		</head>
 
 <body class="home page-template page-template-templates page-template-fullwidth page-template-templatesfullwidth-php page page-id-1291 wp-embed-responsive ltr theme-marja woocommerce-no-js elementor-default elementor-kit-9 elementor-page elementor-page-1291 marja-body lastudio-marja site-no-sidebar body-loading lakit--enabled lakit-nojs">
@@ -201,37 +231,7 @@ var wc_country_select_params = {"countries":"{\"AF\":[],\"AL\":{\"AL-01\":\"Bera
 </div>
 <div class="lakit-nav-menuwrap lakit-nav-menuwrap-5e3e2fc"><div class="lakit-nav lakit-nav-5e3e2fc lakit-nav--horizontal">
 
-	<style>
-		.menu-item-has-children {
-			position: relative;
-		}
-		
-		.lakit-nav__sub {
-			display: none; /* Hide by default */
-			position: absolute;
-			top: 100%; /* Position below the parent menu */
-			left: 0; /* Align to the left of the parent */
-			background: #fff;
-			border: 1px solid #ddd;
-			z-index: 1000;
-			min-width: 100%; /* Ensure submenu width matches the parent */
-			white-space: nowrap; /* Prevent text wrapping */
-		}
-		
-		.menu-item-has-children:hover .lakit-nav__sub {
-			display: block; /* Show submenu on hover */
-		}
-		
-		/* Align submenu to the left */
-		.lakit-nav__sub {
-			right: auto;
-		}
-		
-		.menu-item-has-children:hover .lakit-nav__sub {
-			left: 0; /* Ensure the submenu starts from the left */
-			right: auto; /* Disable right alignment */
-		}
-	</style>
+
 	
 		<div class="menu-item menu-item-type-custom menu-item-object-custom lakit-nav-id-5e3e2fc menu-item-has-children lakit-nav__item--mega lakit-nav__item-32 lakit-nav__item">
 			<a href="#" class="menu-item-link menu-item-link-depth-0 menu-item-link-top"><span class="lakit-nav-link-inner"><span class="lakit-nav-link-text"><span class="menu-text">Shop</span></span></span><i class="lakit-nav-arrow lastudioicon-down-arrow"></i></a><div class="lakit-nav__sub lakit-nav__sub-mega lakit-nav-depth-0" data-position="default" data-max-width="1400px" style="--mm-sub-width:1400px">		<div data-elementor-type="wp-post" data-elementor-id="32" class="elementor elementor-32">
@@ -748,6 +748,16 @@ var wc_country_select_params = {"countries":"{\"AF\":[],\"AL\":{\"AL-01\":\"Bera
 
 </div>
 <!-- .lakit-site-wrapper -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Ensure submenu alignment after page load
+        document.querySelectorAll('.lakit-nav__sub').forEach(function(submenu) {
+            submenu.style.left = "0";
+            submenu.style.right = "auto";
+        });
+    });
+</script>
+
 		<script data-laps-action="reorder" type="javascript/blocked">window.RS_MODULES = window.RS_MODULES || {};
 			window.RS_MODULES.modules = window.RS_MODULES.modules || {};
 			window.RS_MODULES.waiting = window.RS_MODULES.waiting || [];
