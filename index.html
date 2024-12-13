@@ -210,7 +210,7 @@ var wc_country_select_params = {"countries":"{\"AF\":[],\"AL\":{\"AL-01\":\"Bera
 			display: none; /* Hide by default */
 			position: absolute;
 			top: 100%; /* Position below the parent menu */
-			left: 0;
+			left: 0; /* Align to the left of the parent */
 			background: #fff;
 			border: 1px solid #ddd;
 			z-index: 1000;
@@ -222,19 +222,17 @@ var wc_country_select_params = {"countries":"{\"AF\":[],\"AL\":{\"AL-01\":\"Bera
 			display: block; /* Show submenu on hover */
 		}
 		
-		/* Ensure submenu aligns properly if it's near the screen's right edge */
+		/* Align submenu to the left */
 		.lakit-nav__sub {
 			right: auto;
 		}
 		
 		.menu-item-has-children:hover .lakit-nav__sub {
-			left: 200;
-			right: 100; /* If near screen edge, align the submenu to the left */
+			left: 0; /* Ensure the submenu starts from the left */
+			right: auto; /* Disable right alignment */
 		}
-		
-		
-		
 	</style>
+	
 		<div class="menu-item menu-item-type-custom menu-item-object-custom lakit-nav-id-5e3e2fc menu-item-has-children lakit-nav__item--mega lakit-nav__item-32 lakit-nav__item">
 			<a href="#" class="menu-item-link menu-item-link-depth-0 menu-item-link-top"><span class="lakit-nav-link-inner"><span class="lakit-nav-link-text"><span class="menu-text">Shop</span></span></span><i class="lakit-nav-arrow lastudioicon-down-arrow"></i></a><div class="lakit-nav__sub lakit-nav__sub-mega lakit-nav-depth-0" data-position="default" data-max-width="1400px" style="--mm-sub-width:1400px">		<div data-elementor-type="wp-post" data-elementor-id="32" class="elementor elementor-32">
 							<div class="elementor-element elementor-element-3d6b9c1 e-flex e-con-boxed lakit-col-width-auto-no e-container e-root-container elementor-top-section e-loc-h e-con e-parent" data-id="3d6b9c1" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
