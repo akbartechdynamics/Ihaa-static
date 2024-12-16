@@ -304,9 +304,9 @@ var wc_country_select_params = {"countries":"{\"AF\":[],\"AL\":{\"AL-01\":\"Bera
 	  `;
 	  document.head.appendChild(style);
 	});
-	</script>
+</script>
 	
-<div class="menu-item menu-item-type-post_type menu-item-object-page lakit-nav-id-5e3e2fc lakit-nav__item--default lakit-nav__item-1988 lakit-nav__item"><a href="/contact/" class="menu-item-link menu-item-link-depth-0 menu-item-link-top"><span class="lakit-nav-link-inner"><span class="lakit-nav-link-text"><span class="menu-text">Contact Us</span></span></span></a></div>
+<div class="menu-item menu-item-type-post_type menu-item-object-page lakit-nav-id-5e3e2fc lakit-nav__item--default lakit-nav__item-1988 lakit-nav__item"><a href="contact.html" class="menu-item-link menu-item-link-depth-0 menu-item-link-top"><span class="lakit-nav-link-inner"><span class="lakit-nav-link-text"><span class="menu-text">Contact Us</span></span></span></a></div>
 <div class="lakit-nav__mobile-close-btn lakit-blocks-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 32 32"><path fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10" d="m6 6 20 20M6 26 26 6"></path></svg></div>
 </div></div>
 </div>		</div>
@@ -359,7 +359,8 @@ var wc_country_select_params = {"countries":"{\"AF\":[],\"AL\":{\"AL-01\":\"Bera
 				</div>
 					</div>
 				</div>
-		<div class="elementor-element elementor-element-13c23bf e-flex e-con-boxed lakit-col-width-auto-no e-container e-root-container elementor-top-section e-con e-parent" data-id="13c23bf" data-element_type="container">
+				<!--  -->
+		<!-- <div class="elementor-element elementor-element-13c23bf e-flex e-con-boxed lakit-col-width-auto-no e-container e-root-container elementor-top-section e-con e-parent" data-id="13c23bf" data-element_type="container">
 					<div class="e-con-inner">
 		<div class="elementor-element elementor-element-942fc67 e-con-full e-flex lakit-col-width-auto-no e-container e-con e-child" data-id="942fc67" data-element_type="container">
 				<div class="elementor-element elementor-element-6ed5a48 elementor-widget elementor-widget-heading" data-id="6ed5a48" data-element_type="widget" data-widget_type="heading.default">
@@ -465,7 +466,119 @@ var wc_country_select_params = {"countries":"{\"AF\":[],\"AL\":{\"AL-01\":\"Bera
 				</div>
 				</div>
 					</div>
-				</div>
+				</div> -->
+				<!--  -->
+
+<!-- Dynamic card started -->
+
+<div class="elementor-element elementor-element-13c23bf e-flex e-con-boxed lakit-col-width-auto-no e-container e-root-container elementor-top-section e-con e-parent">
+    <div class="e-con-inner">
+      <div class="elementor-element elementor-element-942fc67 e-con-full e-flex lakit-col-width-auto-no e-container e-con e-child">
+        <div class="elementor-element elementor-element-6ed5a48 elementor-widget elementor-widget-heading">
+          <div class="elementor-widget-container">
+            <h2 class="elementor-heading-title elementor-size-default">Our Products</h2>
+          </div>
+        </div>
+        <div class="elementor-element elementor-element-a88350a active-object-fit active-object-fit-true actionzone-a-direction-row actionzone-a-hover-yes actionzone-a-pos-center-center actionzone-b-pos-top-right actionzone-c-pos-bottom-center elementor-widget lastudio-kit elementor-lakit-wooproducts">
+          <div class="elementor-widget-container">
+            <div class="woocommerce lakit_wc_widget_a88350a_0">
+              <div class="lakit-products">
+                <div class="lakit-products__list_wrapper">
+                  <ul id="products-container" class="products ul_products lakit-products__list products-grid products-grid-default ul_products_v2 col-row columns-4">
+                    <!-- Product cards will be dynamically injected here -->
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const productsContainer = document.getElementById("products-container");
+
+      // Fetch product details from JSON file
+      fetch('products.json')
+        .then(response => response.json())
+        .then(products => {
+          products.forEach(product => {
+            // Create product card dynamically
+            const productCard = `
+              <li class="product type-product post-${product.id} status-publish instock has-post-thumbnail shipping-taxable purchasable product-type-simple lakit-product product_item col-desk-4 col-tabp-2 col-lap-4 col-tab-4">
+                <div class="product_item--inner">
+                  <div class="product_item--thumbnail">
+                    <div class="product_item--thumbnail-holder">
+                      <a href="${product.link}" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                        <div class="lakit-embla__slide figure__object_fit p_img-first">
+                          <img decoding="async" width="1800" height="4000" src="${product.image}" class="attachment-full size-full" alt="${product.title}">
+                        </div>
+                        <span class="item--overlay"></span>
+                      </a>
+                    </div>
+                    <div class="lakitp-zone lakitp-zone-a">
+                      <a class="lakitp-zone-item elementor-repeater-item-2f4fe46 only-icon lakit-btn quickview button la-quickview-button lakit--hint" href="${product.link}" data-hint="Quickview" rel="nofollow">
+                        <span class="lakit-btn--icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300" class="lakit-font-icon-svg">
+                            <use xlink:href="#LaStudioIcons___zoom_2"></use>
+                          </svg>
+                        </span>
+                        <span class="lakit-btn--text">Quickview</span>
+                      </a>
+                      <a class="lakitp-zone-item elementor-repeater-item-17bc839 only-icon lakit-btn add_wishlist button la-core-wishlist lakit--hint" href="${product.link}" data-hint="Add to wishlist" rel="nofollow">
+                        <span class="lakit-btn--icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300" class="lakit-font-icon-svg">
+                            <use xlink:href="#LaStudioIcons___heart_2"></use>
+                          </svg>
+                        </span>
+                        <span class="lakit-btn--text">Add to wishlist</span>
+                      </a>
+                      <a class="lakitp-zone-item elementor-repeater-item-1da8747 only-icon lakit-btn add_compare button la-core-compare lakit--hint" href="${product.link}" data-hint="Add to compare" rel="nofollow">
+                        <span class="lakit-btn--icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300" class="lakit-font-icon-svg">
+                            <use xlink:href="#LaStudioIcons___ic_compare_arrows_24px"></use>
+                          </svg>
+                        </span>
+                        <span class="lakit-btn--text">Add to compare</span>
+                      </a>
+                      <a href="/accessories/?add-to-cart=${product.id}" class="lakit-btn la-addcart lakitp-zone-item elementor-repeater-item-72a6280 only-icon button product_type_simple add_to_cart_button ajax_add_to_cart lakit--hint" data-product_id="${product.id}" rel="nofollow" data-hint="Add to cart">
+                        <span class="lakit-btn--icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300" class="lakit-font-icon-svg">
+                            <use xlink:href="#LaStudioIcons___shopping_cart_3"></use>
+                          </svg>
+                        </span>
+                        <span class="lakit-btn--text">Add to cart</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="product_item--info">
+                    <div class="lakitp-zone lakitp-zone-d">
+                      <h3 class="product_item--title">
+                        <a href="${product.link}">${product.title}</a>
+                      </h3>
+                      <div class="product_item--price price">
+                        <span class="woocommerce-Price-amount amount">
+                          <bdi>
+                            <span class="woocommerce-Price-currencySymbol">&#8377;</span>${product.price}
+                          </bdi>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            `;
+            // Append the product card to the container
+            productsContainer.innerHTML += productCard;
+          });
+        })
+        .catch(error => console.error('Error fetching products:', error));
+    });
+  </script>
+
+<!-- Dynamic card Ended -->
 				</div>
 				<div data-elementor-type="footer" data-elementor-id="247" class="elementor elementor-247 elementor-location-footer">
 			<div class="elementor-element elementor-element-9504a6f e-flex e-con-boxed lakit-col-width-auto-no e-container e-root-container elementor-top-section e-con e-parent" data-id="9504a6f" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">

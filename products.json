@@ -1,0 +1,24 @@
+[
+    {
+      "id": 1,
+      "title": "Handcrafted Fabric Earrings",
+      "price": "99.00",
+      "image": "wp-content/uploads/2024/09/Cl-1.1.png",
+      "link": "/product/handcrafted-fabric-earrings/"
+    },
+    {
+      "id": 2,
+      "title": "Handcrafted Fabric Earrings 2",
+      "price": "99.00",
+      "image": "wp-content/uploads/2024/09/Cl-2.1.png",
+      "link": "/product/handcrafted-fabric-earrings-2/"
+    },
+    {
+      "id": 3,
+      "title": "Hand crafted Macramé Cord Earrings",
+      "price": "199.00",
+      "image": "wp-content/uploads/2024/09/CO-1.png",
+      "link": "/product/hand-crafted-macrame-cord-earrings-2/"
+    }
+  ]
+  
